@@ -103,7 +103,7 @@
       // Initiate DAppClient
       const client = new beacon.DAppClient({
         name: 'Example DApp', // Name of the DApp,
-        //preferredNetwork: beacon.NetworkType.ITHACANET,
+        preferredNetwork: beacon.NetworkType.GHOSTNET,
       })
 
       // Display the active account in the UI
@@ -160,7 +160,7 @@
       // Initiate a permission request
       const requestPermission = (callback) => {
         client
-          .requestPermissions({ network: { type: beacon.NetworkType.ITHACANET } })
+          .requestPermissions({ network: { type: beacon.NetworkType.GHOSTNET } })
           .then((permissions) => {
             console.log('permissions', permissions)
             if (callback) {
